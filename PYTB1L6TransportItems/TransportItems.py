@@ -1,36 +1,43 @@
 import time, os
 def main():
     
-    factory = ["car"]
+    factory = ["fiets"]
     distribution = []
     shop = []
 
-    os.system('cls')
 
-    print("Factory[car]")
-    print("distribution[]")
-    print("shop[]")
-
+    print("Factory: " + str(factory))
+    print("Distrubution: " + str(distribution))
+    print("Shop: " + str(shop))
+    print("==============")
+    
     if len(factory) > 0:
-        factory.clear()
+        
+        x = factory.pop(0)
         time.sleep(1)
-        distribution.append("car")
-        print("Factory[]")
-        print("distribution[car]")
-        print("shop[]")
-    os.system('cls')
+        distribution.append(x)
+        print("Factory: " + str(factory))
+        print("Distrubution: " + str(distribution))
+        print("Shop: " + str(shop))
+        print("==============")
+    
+    
     if len(distribution) > 0:
-        factory.clear()
+        x = distribution.pop(0)
         time.sleep(1)
-        shop.append("car")
-        print("Factory[]")
-        print("distribution[]")
-        print("shop[car]")
-    os.system('cls')
+        shop.append(x)
+        print("Factory: " + str(factory))
+        print("Distrubution: " + str(distribution))
+        print("Shop: " + str(shop))
+        print("==============")
+
+    os.system('clear')
+    
 main()
+
 retry = input("Wil jij dit progamma opnieuw proberen? Y/N: ").upper()
 while True:
-    if retry == "y".upper() or retry == "n".upper():
+    if retry == "Y" or retry == "N":
         if retry == "Y":
             main()
             retry = input("Wil jij dit progamma opnieuw proberen? Y/N: ").upper()
